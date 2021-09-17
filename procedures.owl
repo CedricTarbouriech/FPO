@@ -1,0 +1,555 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/tarbour_c/ontologies/2019/6/procedures"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/tarbour_c/ontologies/2019/6/procedures">
+    <Prefix name="" IRI="http://www.semanticweb.org/tarbour_c/ontologies/2019/6/procedures"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://stl.mie.utoronto.ca/ontologies/process_specification_language/psl_core</Import>
+    <Import>http://stl.mie.utoronto.ca/ontologies/process_specification_language/psl_subactivity</Import>
+    <Declaration>
+        <Class IRI="http://stl.mie.utoronto.ca/ontologies/process_specification_language/psl_core#Activity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://stl.mie.utoronto.ca/ontologies/process_specification_language/psl_core#Object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://stl.mie.utoronto.ca/ontologies/process_specification_language/psl_core#OccurrenceOrObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://stl.mie.utoronto.ca/ontologies/process_specification_language/psl_interval_core#OccurrenceOrObjectOrInterval"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://stl.mie.utoronto.ca/ontologies/process_specification_language/psl_subactivity#Primitive"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Act"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Advise"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Alert"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Announce"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Apply"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Artifact"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Button"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Check"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Click"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Communicate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Complete"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Confirm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Display"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Establish"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fetch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Increase"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InformationObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Instrument"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lever"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Monitor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Notify"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Order"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PersonGroup"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Prepare"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Press"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pull"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Push"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Request"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sensor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Set"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Start"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Stow"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Switch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Use"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://stl.mie.utoronto.ca/ontologies/process_specification_language/psl_subactivity#proper_subactivity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://stl.mie.utoronto.ca/ontologies/process_specification_language/psl_subactivity#subactivity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#belongs_to_group"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#endloc_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_agent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_goal"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_patient"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_situation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has_theme"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_agent_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_composed_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_goal_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_patient_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is_theme_of"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#has_endloc"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="http://stl.mie.utoronto.ca/ontologies/process_specification_language/psl_subactivity#Primitive"/>
+        <Class IRI="http://stl.mie.utoronto.ca/ontologies/process_specification_language/psl_core#Activity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Act"/>
+        <Class IRI="http://stl.mie.utoronto.ca/ontologies/process_specification_language/psl_subactivity#Primitive"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Advise"/>
+        <Class IRI="#Communicate"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Alert"/>
+        <Class IRI="#Communicate"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Announce"/>
+        <Class IRI="#Communicate"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Apply"/>
+        <Class IRI="#Act"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Artifact"/>
+        <Class IRI="http://stl.mie.utoronto.ca/ontologies/process_specification_language/psl_core#Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Button"/>
+        <Class IRI="#Instrument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Check"/>
+        <Class IRI="#Fetch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Click"/>
+        <Class IRI="#Act"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Communicate"/>
+        <Class IRI="http://stl.mie.utoronto.ca/ontologies/process_specification_language/psl_subactivity#Primitive"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Complete"/>
+        <Class IRI="#Act"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Confirm"/>
+        <Class IRI="#Communicate"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Display"/>
+        <Class IRI="#Artifact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Establish"/>
+        <Class IRI="#Act"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fetch"/>
+        <Class IRI="http://stl.mie.utoronto.ca/ontologies/process_specification_language/psl_subactivity#Primitive"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Increase"/>
+        <Class IRI="#Act"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InformationObject"/>
+        <Class IRI="http://stl.mie.utoronto.ca/ontologies/process_specification_language/psl_core#Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Instrument"/>
+        <Class IRI="#Artifact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lever"/>
+        <Class IRI="#Instrument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Monitor"/>
+        <Class IRI="#Fetch"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Notify"/>
+        <Class IRI="#Communicate"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Order"/>
+        <Class IRI="#Communicate"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Person"/>
+        <Class IRI="http://stl.mie.utoronto.ca/ontologies/process_specification_language/psl_core#Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PersonGroup"/>
+        <Class IRI="http://stl.mie.utoronto.ca/ontologies/process_specification_language/psl_core#Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Prepare"/>
+        <Class IRI="#Act"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Press"/>
+        <Class IRI="#Act"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pull"/>
+        <Class IRI="#Act"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Push"/>
+        <Class IRI="#Act"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Request"/>
+        <Class IRI="#Communicate"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sensor"/>
+        <Class IRI="#Artifact"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Set"/>
+        <Class IRI="http://stl.mie.utoronto.ca/ontologies/process_specification_language/psl_subactivity#Primitive"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Set"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="#has_endloc"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Start"/>
+        <Class IRI="#Act"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Stow"/>
+        <Class IRI="#Act"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Switch"/>
+        <Class IRI="#Instrument"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Use"/>
+        <Class IRI="#Act"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Advise"/>
+        <Class IRI="#Alert"/>
+        <Class IRI="#Announce"/>
+        <Class IRI="#Confirm"/>
+        <Class IRI="#Notify"/>
+        <Class IRI="#Order"/>
+        <Class IRI="#Request"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Advise"/>
+        <Class IRI="#Alert"/>
+        <Class IRI="#Announce"/>
+        <Class IRI="#Notify"/>
+        <Class IRI="#Order"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Apply"/>
+        <Class IRI="#Click"/>
+        <Class IRI="#Complete"/>
+        <Class IRI="#Establish"/>
+        <Class IRI="#Increase"/>
+        <Class IRI="#Prepare"/>
+        <Class IRI="#Press"/>
+        <Class IRI="#Pull"/>
+        <Class IRI="#Push"/>
+        <Class IRI="#Start"/>
+        <Class IRI="#Stow"/>
+        <Class IRI="#Use"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Artifact"/>
+        <Class IRI="#Person"/>
+        <Class IRI="#PersonGroup"/>
+    </DisjointClasses>
+    <DisjointUnion>
+        <Class IRI="http://stl.mie.utoronto.ca/ontologies/process_specification_language/psl_core#Object"/>
+        <Class IRI="#Artifact"/>
+        <Class IRI="#Person"/>
+        <Class IRI="#PersonGroup"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="#Act"/>
+        <Class IRI="#Apply"/>
+        <Class IRI="#Click"/>
+        <Class IRI="#Complete"/>
+        <Class IRI="#Establish"/>
+        <Class IRI="#Increase"/>
+        <Class IRI="#Prepare"/>
+        <Class IRI="#Press"/>
+        <Class IRI="#Pull"/>
+        <Class IRI="#Push"/>
+        <Class IRI="#Start"/>
+        <Class IRI="#Stow"/>
+        <Class IRI="#Use"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="#Communicate"/>
+        <Class IRI="#Advise"/>
+        <Class IRI="#Alert"/>
+        <Class IRI="#Announce"/>
+        <Class IRI="#Confirm"/>
+        <Class IRI="#Notify"/>
+        <Class IRI="#Order"/>
+        <Class IRI="#Request"/>
+    </DisjointUnion>
+    <DisjointUnion>
+        <Class IRI="#Fetch"/>
+        <Class IRI="#Check"/>
+        <Class IRI="#Monitor"/>
+    </DisjointUnion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#belongs_to_group"/>
+        <ObjectProperty IRI="#is_composed_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#has_agent"/>
+        <ObjectProperty IRI="#is_agent_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#has_goal"/>
+        <ObjectProperty IRI="#is_goal_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#has_patient"/>
+        <ObjectProperty IRI="#is_patient_of"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#has_theme"/>
+        <ObjectProperty IRI="#is_theme_of"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#belongs_to_group"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_agent"/>
+        <Class IRI="http://stl.mie.utoronto.ca/ontologies/process_specification_language/psl_core#Activity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_goal"/>
+        <Class IRI="http://stl.mie.utoronto.ca/ontologies/process_specification_language/psl_core#Activity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_patient"/>
+        <Class IRI="http://stl.mie.utoronto.ca/ontologies/process_specification_language/psl_core#Activity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has_theme"/>
+        <Class IRI="http://stl.mie.utoronto.ca/ontologies/process_specification_language/psl_core#Activity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is_goal_of"/>
+        <ObjectUnionOf>
+            <Class IRI="#Person"/>
+            <Class IRI="#PersonGroup"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#belongs_to_group"/>
+        <Class IRI="#PersonGroup"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_agent"/>
+        <ObjectUnionOf>
+            <Class IRI="#Person"/>
+            <Class IRI="#PersonGroup"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_goal"/>
+        <ObjectUnionOf>
+            <Class IRI="#Person"/>
+            <Class IRI="#PersonGroup"/>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_patient"/>
+        <Class IRI="#Artifact"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has_theme"/>
+        <Class IRI="#InformationObject"/>
+    </ObjectPropertyRange>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="http://stl.mie.utoronto.ca/ontologies/process_specification_language/psl_subactivity#proper_subactivity"/>
+            <ObjectProperty IRI="#has_agent"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#has_agent"/>
+    </SubObjectPropertyOf>
+    <FunctionalDataProperty>
+        <DataProperty IRI="#has_endloc"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="#has_endloc"/>
+        <Class IRI="http://stl.mie.utoronto.ca/ontologies/process_specification_language/psl_core#Activity"/>
+    </DataPropertyDomain>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Artifact</IRI>
+        <Literal xml:lang="en">Tool</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Button</IRI>
+        <Literal xml:lang="en">Button</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Display</IRI>
+        <Literal xml:lang="en">Display</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#InformationObject</IRI>
+        <Literal xml:lang="en">Message</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Instrument</IRI>
+        <Literal xml:lang="en">Trigger</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Lever</IRI>
+        <Literal xml:lang="en">Lever</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Person</IRI>
+        <Literal xml:lang="en">Person</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PersonGroup</IRI>
+        <Literal xml:lang="en">PersonGroup</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sensor</IRI>
+        <Literal xml:lang="en">Sensor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Set</IRI>
+        <Literal xml:lang="fr">Identique au MultiSet à l&apos;exception qu&apos;il n&apos;y a qu&apos;une seule option possible</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Switch</IRI>
+        <Literal xml:lang="en">Switch</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#has_endloc</IRI>
+        <Literal xml:lang="fr">a pour endloc</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
